@@ -1,0 +1,38 @@
+@host = http://127.0.0.1:5000
+
+GET {{host}}/
+
+###Create an item
+POST {{host}}/users
+Content-Type: application/json
+
+{
+    "name":"John Doe",
+    "age":30,
+    "email":"john@doe.com",
+    "password":"123456"
+      
+}
+
+###Read all items
+GET {{host}}/users
+Content-Type: application/json
+
+###Read single item by id
+GET {{host}}/users/7
+Content-Type: application/json
+
+###Update an item
+PUT {{host}}/users/7
+Content-Type: application/json
+
+{
+    "name":"John Doe",
+    "age":35,
+    "email":"Joe.doe@gmail.com",
+    "password":"abc123"
+}
+
+###Delete an item
+DELETE {{host}}/users/8
+Content-Type: "application/json"
